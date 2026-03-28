@@ -14,14 +14,43 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
     private Vector2 moveInput;
     private Vector2 lookInput;
+    private Transform cameraOffset;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        
+        if (characterController == null)
+        {
+            Debug.LogError("PlayerMovement: CharacterController not found on this GameObject!");
+            enabled = false;
+            return;
+        }
+
         // Ensure the camera reference is set
         if (vrCamera == null)
-            vrCamera = Camera.main.transform;
+        {
+            if (Camera.main != null)
+                vrCamera = Camera.main.transform;
+            else
+            {
+                Debug.LogError("PlayerMovement: No VR Camera assigned and no Main Camera found!");
+                enabled = false;
+                return;
+            }
+        }
+
+        // Fix for 3 DOF VR head height (e.g. Cardboard)
+        // Ensure the camera is wrapped in an offset so we can raise it from the floor
+        if (vrCamera.parent == transform)
+        {
+            GameObject offsetObj = new GameObject("CameraOffset");
+            cameraOffset = offsetObj.transform;
+            cameraOffset.SetParent(transform);
+            cameraOffset.localPosition = new Vector3(0, 1.6f, 0); // Average eye height
+            cameraOffset.localRotation = Quaternion.identity;
+            vrCamera.SetParent(cameraOffset);
+            vrCamera.localPosition = Vector3.zero;
+        }
     }
 
     // Input System Messages
@@ -36,6 +65,9 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleRotation()
     {
+        if (vrCamera == null)
+            return;
+            
         // This rotates the PLAYER BODY (the parent).
         // The Camera (the head) rotates independently via the Gyro/TrackedPoseDriver.
         float turn = lookInput.x * rotationSpeed * Time.deltaTime;
@@ -44,6 +76,9 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMovement()
     {
+        if (vrCamera == null || characterController == null)
+            return;
+            
         // 1. Get Camera Direction
         Vector3 forward = vrCamera.forward;
         Vector3 right = vrCamera.right;

@@ -9,8 +9,9 @@ public class EditorCameraLook : MonoBehaviour
 
     void Update()
     {
-        // New Input System check for the Left Alt key
-        if (Keyboard.current.leftAltKey.isPressed)
+        // Only works on desktop with keyboard/mouse
+        // Mobile devices don't have Keyboard.current, so null check prevents crashes
+        if (Keyboard.current != null && Mouse.current != null && Keyboard.current.leftAltKey.isPressed)
         {
             // New Input System way to get Mouse Delta
             Vector2 mouseDelta = Mouse.current.delta.ReadValue();

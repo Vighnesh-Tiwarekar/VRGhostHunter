@@ -7,15 +7,24 @@ public class GazeInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void Start() {
         myRenderer = GetComponent<Renderer>();
+        if (myRenderer == null) {
+            Debug.LogWarning("GazeInteract: No Renderer component found on " + gameObject.name);
+            enabled = false;
+            return;
+        }
+        // Create instance to avoid modifying shared material
+        myRenderer.material = new Material(myRenderer.material);
     }
 
     // This runs when the Reticle enters the object
     public void OnPointerEnter(PointerEventData eventData) {
-        myRenderer.material.color = Color.red;
+        if (myRenderer != null)
+            myRenderer.material.color = Color.red;
     }
 
     // This runs when the Reticle leaves the object
     public void OnPointerExit(PointerEventData eventData) {
-        myRenderer.material.color = Color.white;
+        if (myRenderer != null)
+            myRenderer.material.color = Color.white;
     }
 }
