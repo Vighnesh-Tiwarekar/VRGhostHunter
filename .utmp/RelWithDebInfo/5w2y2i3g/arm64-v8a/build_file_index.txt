@@ -1,0 +1,2 @@
+H:\UnityProjects\ARGhostHunter1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+H:\UnityProjects\ARGhostHunter1\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

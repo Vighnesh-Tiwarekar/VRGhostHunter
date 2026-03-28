@@ -1,0 +1,87 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void EditorCameraLook_Update_m7F4A3302E7D8034F91E7F7A03A214D17F4FBD491 (void);
+extern void EditorCameraLook__ctor_m3A9A3A82C3429B3EA2FDE34C6418BA61FDCC5280 (void);
+extern void GazeInteract_Start_mC59DEA632CE2F654D8E950F399D0D1AE0EE5EF43 (void);
+extern void GazeInteract_OnPointerEnter_m221F9CDB313D5EDA65C932206D2CD7A978DF7ECB (void);
+extern void GazeInteract_OnPointerExit_m5FFC27707D70678A8B8D5B583484698F0BEBB1AE (void);
+extern void GazeInteract__ctor_mDA3CEB0D21904E3F1D63461C758D40406B93130A (void);
+extern void PlayerMovement_Start_m83FD44DCA324CE3D05A71FD2E2991FCD743F003A (void);
+extern void PlayerMovement_OnMove_mF6863ADE778EEEB1F969D17F886684854EC7E511 (void);
+extern void PlayerMovement_OnLook_m5E6421D5225C760A26650C22627F3D0F6168F518 (void);
+extern void PlayerMovement_Update_m5BB6CE35AF68EE00CFEB4BA5EBA17E10667551D3 (void);
+extern void PlayerMovement_HandleRotation_m8FA45B30AFF9B8ADD90AC955774BA244C8668608 (void);
+extern void PlayerMovement_HandleMovement_mEA6BBF3281649F33072CB6F29B58CD13B7442126 (void);
+extern void PlayerMovement__ctor_mB37559C5B0638161878D20E00B7C672FC38BBBAA (void);
+extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
+extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[17] = 
+{
+	EditorCameraLook_Update_m7F4A3302E7D8034F91E7F7A03A214D17F4FBD491,
+	EditorCameraLook__ctor_m3A9A3A82C3429B3EA2FDE34C6418BA61FDCC5280,
+	GazeInteract_Start_mC59DEA632CE2F654D8E950F399D0D1AE0EE5EF43,
+	GazeInteract_OnPointerEnter_m221F9CDB313D5EDA65C932206D2CD7A978DF7ECB,
+	GazeInteract_OnPointerExit_m5FFC27707D70678A8B8D5B583484698F0BEBB1AE,
+	GazeInteract__ctor_mDA3CEB0D21904E3F1D63461C758D40406B93130A,
+	PlayerMovement_Start_m83FD44DCA324CE3D05A71FD2E2991FCD743F003A,
+	PlayerMovement_OnMove_mF6863ADE778EEEB1F969D17F886684854EC7E511,
+	PlayerMovement_OnLook_m5E6421D5225C760A26650C22627F3D0F6168F518,
+	PlayerMovement_Update_m5BB6CE35AF68EE00CFEB4BA5EBA17E10667551D3,
+	PlayerMovement_HandleRotation_m8FA45B30AFF9B8ADD90AC955774BA244C8668608,
+	PlayerMovement_HandleMovement_mEA6BBF3281649F33072CB6F29B58CD13B7442126,
+	PlayerMovement__ctor_mB37559C5B0638161878D20E00B7C672FC38BBBAA,
+	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
+	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[17] = 
+{
+	13607,
+	13607,
+	13607,
+	10284,
+	10284,
+	13607,
+	13607,
+	10284,
+	10284,
+	13607,
+	13607,
+	13607,
+	13607,
+	13607,
+	13607,
+	23898,
+	13607,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	17,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
